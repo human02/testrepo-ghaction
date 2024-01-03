@@ -33,4 +33,4 @@ jobs:
 
       - name: Deploy Code
         run: |
-          rsync -r --delete-after $GITHUB_WORKSPACE/ user@your-server:/path/to/destination
+          rsync -r --delete-after $GITHUB_WORKSPACE/ aarav@10.0.0.95:/Users/aarav/Desktop/gh-dest/
