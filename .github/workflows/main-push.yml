@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged_to_main:
+    if: |
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run My Job
+        run: echo "The PR was merged to the main branch"
